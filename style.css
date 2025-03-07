@@ -187,6 +187,45 @@ html,body{
     width: 70%;
     font-size: 3vw;
     font-weight: 250;
+    color: #ffffff85;
+}
+
+#page5{
+    position: relative;
+    height: 500vh;
+    width: 100vw;
+}
+
+#page5>canvas{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#page6{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    font-family: 'hilmar';
+    flex-direction: column;
+}
+
+#page6>h3{
+    margin-left: 15vw;
     color: #ffffff;
+    margin-bottom: 2vw;
+    font-weight: 180;
+}
+
+#page6>h1{ 
+    margin-left: 15vw;
+    font-size: 3vw;
+    width: 70%;
+    color: #ffffff53;
+    font-weight: 250;
 }
 

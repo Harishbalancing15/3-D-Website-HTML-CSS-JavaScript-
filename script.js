@@ -208,3 +208,214 @@ ScrollTrigger.create({
 });
 }
 canvas()
+
+
+
+
+
+var clutter = "";
+
+document.querySelector("#page4>h1").textContent.split(" ").forEach(function(dets){
+  clutter += `<span> ${dets} </span>`
+
+  document.querySelector("#page4>h1").innerHTML = clutter;
+})
+
+
+
+
+
+gsap.to("#page4>h1>span",{
+  ScrollTrigger:{
+    trigger: `#page4>h1>span`,
+    start: `top bottom`,
+    end: `bottom top`,
+    scroller:`main`,
+    scrub: .5,
+    markers: true,
+  },
+  stagger: .2,
+  color: `white`
+})
+
+
+
+
+function canvas1(){
+  const canvas = document.querySelector("#page5>canvas");
+  const context = canvas.getContext("2d");
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+  
+  function files(index) {
+    var data = `
+    ../components/bridges00004.png
+    ../components/bridges00010.png
+    ../components/bridges00013.png
+    ../components/bridges00016.png
+    ../components/bridges00019.png
+    ../components/bridges00022.png
+    ../components/bridges00025.png
+    ../components/bridges00028.png
+    ../components/bridges00031.png
+    ../components/bridges00034.png
+    ../components/bridges00037.png
+    ../components/bridges00040.png
+    ../components/bridges00043.png
+    ../components/bridges00046.png
+    ../components/bridges00049.png
+    ../components/bridges00052.png
+    ../components/bridges00055.png
+    ../components/bridges00058.png
+    ../components/bridges00061.png
+    ../components/bridges00064.png
+    ../components/bridges00067.png
+    ../components/bridges00070.png
+    ../components/bridges00073.png
+    ../components/bridges00076.png
+    ../components/bridges00079.png
+    ../components/bridges00085.png
+    ../components/bridges00088.png
+    ../components/bridges00091.png
+    ../components/bridges00094.png
+    ../components/bridges00097.png
+    ../components/bridges00100.png
+    ../components/bridges00103.png
+    ../components/bridges00106.png
+    ../components/bridges00109.png
+    ../components/bridges00112.png
+    ../components/bridges00115.png
+    ../components/bridges00118.png
+    ../components/bridges00121.png
+    ../components/bridges00124.png
+    ../components/bridges00127.png
+    ../components/bridges00130.png
+    ../components/bridges00133.png
+    ../components/bridges00136.png
+    ../components/bridges00139.png
+    ../components/bridges00142.png
+    ../components/bridges00145.png
+    ../components/bridges00148.png
+    ../components/bridges00151.png
+    ../components/bridges00154.png
+    ../components/bridges00157.png
+    ../components/bridges00160.png
+    ../components/bridges00163.png
+    ../components/bridges00166.png
+    ../components/bridges00169.png
+    ../components/bridges00172.png
+    ../components/bridges00175.png
+    ../components/bridges00178.png
+    ../components/bridges00181.png
+    ../components/bridges00184.png
+    ../components/bridges00187.png
+    ../components/bridges00190.png
+    ../components/bridges00193.png
+    ../components/bridges00196.png
+    ../components/bridges00199.png
+    ../components/bridges00202.png
+    `
+    ;
+    return data.split("\n")[index];
+  }
+  
+  const frameCount = 66;
+  
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
+  
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+  
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: .5,
+      trigger: `#page5`,
+      start: `top top`,
+      end: `250% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+  
+  images[1].onload = render;
+  
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+  
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+  
+    trigger: "#page5",
+    pin: true,
+    scroller: `#main`,
+    start: `top top`,
+    end: `250% top`,
+  });
+}
+canvas1()
+
+
+
+  
+
+var clutter = "";
+
+  document.querySelector("#page6>h1").textContent.split(" ").forEach(function(dets){
+    clutter += `<span> ${dets} </span>`
+  
+    document.querySelector("#page6>h1").innerHTML = clutter;
+})
+  
+  
+  
+  
+  
+gsap.to("#page6>h1>span",{
+    ScrollTrigger:{
+      trigger: `#page6>h1>span`,
+      start: `top bottom`,
+      end: `bottom top`,
+      scroller:`main`,
+      scrub: .5,
+      markers: true,
+    },
+    stagger: .2,
+    color: `white`
+})
