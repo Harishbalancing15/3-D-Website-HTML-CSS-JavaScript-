@@ -73,73 +73,74 @@ window.addEventListener("resize", function () {
 });
 
 function files(index) {
-  var data = 
-  `./frames00007.png
-  ./frames00010.png
-  ./frames00013.png
-  ./frames00016.png
-  ./frames00019.png
-  ./frames00022.png
-  ./frames00025.png
-  ./frames00028.png
-  ./frames00031.png
-  ./frames00034.png
-  ./frames00037.png
-  ./frames00040.png
-  ./frames00043.png
-  ./frames00046.png
-  ./frames00049.png
-  ./frames00052.png
-  ./frames00055.png
-  ./frames00058.png
-  ./frames00061.png
-  ./frames00064.png
-  ./frames00067.png
-  ./frames00070.png
-  ./frames00073.png
-  ./frames00076.png
-  ./frames00079.png
-  ./frames00082.png
-  ./frames00085.png
-  ./frames00088.png
-  ./frames00091.png
-  ./frames00094.png
-  ./frames00097.png
-  ./frames00100.png
-  ./frames00103.png
-  ./frames00106.png
-  ./frames00109.png
-  ./frames00112.png
-  ./frames00115.png
-  ./frames00118.png
-  ./frames00121.png
-  ./frames00124.png
-  ./frames00127.png
-  ./frames00130.png
-  ./frames00133.png
-  ./frames00136.png
-  ./frames00139.png
-  ./frames00142.png
-  ./frames00145.png
-  ./frames00148.png
-  ./frames00151.png
-  ./frames00154.png
-  ./frames00157.png
-  ./frames00160.png
-  ./frames00163.png
-  ./frames00166.png
-  ./frames00169.png
-  ./frames00172.png
-  ./frames00175.png
-  ./frames00178.png
-  ./frames00181.png
-  ./frames00184.png
-  ./frames00187.png
-  ./frames00190.png
-  ./frames00193.png
-  ./frames00196.png
-  ./frames00199.png
-  ./frames00202.png`
+  var data = `
+  ../components/frames00007.png
+  ../components/frames00010.png
+  ../components/frames00013.png
+  ../components/frames00016.png
+  ../components/frames00019.png
+  ../components/frames00022.png
+  ../components/frames00025.png
+  ../components/frames00028.png
+  ../components/frames00031.png
+  ../components/frames00034.png
+  ../components/frames00037.png
+  ../components/frames00040.png
+  ../components/frames00043.png
+  ../components/frames00046.png
+  ../components/frames00049.png
+  ../components/frames00052.png
+  ../components/frames00055.png
+  ../components/frames00058.png
+  ../components/frames00061.png
+  ../components/frames00064.png
+  ../components/frames00067.png
+  ../components/frames00070.png
+  ../components/frames00073.png
+  ../components/frames00076.png
+  ../components/frames00079.png
+  ../components/frames00082.png
+  ../components/frames00085.png
+  ../components/frames00088.png
+  ../components/frames00091.png
+  ../components/frames00094.png
+  ../components/frames00097.png
+  ../components/frames00100.png
+  ../components/frames00103.png
+  ../components/frames00106.png
+  ../components/frames00109.png
+  ../components/frames00112.png
+  ../components/frames00115.png
+  ../components/frames00118.png
+  ../components/frames00121.png
+  ../components/frames00124.png
+  ../components/frames00127.png
+  ../components/frames00130.png
+  ../components/frames00133.png
+  ../components/frames00136.png
+  ../components/frames00139.png
+  ../components/frames00142.png
+  ../components/frames00145.png
+  ../components/frames00148.png
+  ../components/frames00151.png
+  ../components/frames00154.png
+  ../components/frames00157.png
+  ../components/frames00160.png
+  ../components/frames00163.png
+  ../components/frames00166.png
+  ../components/frames00169.png
+  ../components/frames00172.png
+  ../components/frames00175.png
+  ../components/frames00178.png
+  ../components/frames00181.png
+  ../components/frames00184.png
+  ../components/frames00187.png
+  ../components/frames00190.png
+  ../components/frames00193.png
+  ../components/frames00196.png
+  ../components/frames00199.png
+  ../components/frames00202.png
+  `
   ;
   return data.split("\n")[index];
 }
@@ -206,4 +207,4 @@ ScrollTrigger.create({
   end: `250% top`,
 });
 }
-canvas();
+canvas()
